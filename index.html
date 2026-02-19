@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Watch TV Shows Online, Watch Movies Online</title>
+    <meta name="description"
+        content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-left">
+                <a href="#" class="logo">STREAMFLIX</a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Kids</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-box">
+                    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <input type="text" placeholder="Titles, people, genres" class="search-input">
+                </div>
+                <div class="nav-item notification">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                    <span class="badge">2</span>
+                </div>
+                <div class="nav-item profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User Profile">
+                    <ion-icon name="caret-down-outline" class="dropdown-icon"></ion-icon>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-backdrop">
+                <img src="https://image.tmdb.org/t/p/original/8rpDcsfLJypbO6vREc0547eccKi.jpg" alt="Hero Background"
+                    class="hero-image">
+                <div class="hero-gradient"></div>
+            </div>
+            <div class="hero-content">
+                <div class="title-logo">
+                    <!-- Text logo for fallback -->
+                    <h1>DUNE: PART TWO</h1>
+                </div>
+                <div class="meta-info">
+                    <span class="match-score">98% Match</span>
+                    <span class="year">2024</span>
+                    <span class="certification">UA 16+</span>
+                    <span class="duration">2h 46m</span>
+                    <span class="quality">4K HDR</span>
+                </div>
+                <p class="description">
+                    Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the
+                    conspirators who destroyed his family. Facing a choice between the love of his life and the fate of
+                    the known universe, he endeavors to prevent a terrible future only he can foresee.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <ion-icon name="play"></ion-icon>
+                        Play
+                    </button>
+                    <button class="btn btn-secondary">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                        More Info
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="content-wrapper">
+            <!-- Row 1: Trending Now -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Trending Now</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left" aria-label="Scroll Left"><ion-icon
+                            name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters" id="trending-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right" aria-label="Scroll Right"><ion-icon
+                            name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+
+            <!-- Row 2: Popular on Platform -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Popular on Platform</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters expanded" id="popular-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+
+            <!-- Row 3: Watch It Again -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Watch It Again</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters" id="watch-again-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+
+            <!-- Row 4: Continue Watching -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Continue Watching for Felix</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters landscape" id="continue-watching-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+
+            <!-- Row 5: Action Movies -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Action Movies</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters" id="action-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+
+            <!-- Row 6: Drama Series -->
+            <section class="row fade-in-section">
+                <h2 class="row-title">Drama Series</h2>
+                <div class="row-slider-container">
+                    <button class="slider-arrow left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="row-posters" id="drama-row">
+                        <!-- Items injected via JS -->
+                    </div>
+                    <button class="slider-arrow right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-links">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Audio Description</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button class="service-code-btn">Service Code</button>
+                <div class="copyright">© 1997-2024 StreamFlix, Inc.</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Video Modal (Hidden by default) -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <!-- Placeholder for video player -->
+                <div class="video-placeholder">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                    <p>Video Player Placeholder</p>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title">Movie Title</h3>
+                <p id="modal-desc">Movie description goes here...</p>
+                <div class="modal-meta">
+                    <span id="modal-year">2024</span>
+                    <span id="modal-rating">UA 16+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
